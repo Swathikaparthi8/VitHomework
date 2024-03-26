@@ -1,0 +1,67 @@
+CUCUMBER======================
+it is bdd framework that fills in the gap between the technical and non technical team members. 
+It is just a plain text that uses a simple syntax with keywords from Gherkins(Dependency). 
+BDD-- Behaviour Driven Development--It is implemented using a tool called Cucumber.
+TDD -- Test Driven Development -- Technical
+Download all needed dependencies in pom.xml file 
+Add cucumber eclipse plugin to create feature file with .feature extension --- create path/configuration for correct Run
+
+Download Gherkins dependency in pom.xml -- FOR KEYWORDS=================================
+Keywords from Gherkins----- For writing a Feature file====================
+Background: 
+Given(This Given statement under background will be executed before every method)
+Feature:
+Scenario:
+Given --- This statement can be mentioned but commented since it is already under Background
+When
+But
+And 
+Then 
+
+==================================================================================================================================
+Example Template================
+#Sample Feature Definition Template
+@tag
+Feature: Title of your feature ==== Run feature file configuration and it creates a code with methods that can be edited and used to create a test case class
+I want to use this template for my feature file
+
+  @tag1 ==== tags are like groups---
+  Scenario: Title of your scenario
+    Given I want to write a step with precondition
+    And some other precondition
+    When I complete action
+    And some other action
+    And yet another action
+    Then I validate the outcomes
+    And check more outcomes
+
+  PARAMETERIZATION 
+Parameterized methods --using variables ----
+eg: @When("I enter {string} and {string}")
+public void i_enter_and(String u, String p) {}
+
+Parameterization of method using DataTable---Import DataTable from java---create obj---use cells method from DataTable
+--------------------------------------------------------------------------------------|
+eg:	@When("^I insert ([^\"]*) ([^\"]*) and ([^\"]*)$") ----using a Regular Expression |
+--------------------------------------------------------------------------------------|
+	public void i_insert_name1_and_success(String n, String v, String s)
+Scenario Outline====== Multiple data
+@tag2
+  Scenario Outline: Title of your scenario outline ===> Scenario Outline --- Multiple values
+    Given I want to write a step with <name>
+    When I check for the <value> in step
+    Then I verify the <status> in step
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |
+      
+Hooks================================================================================================================================
+Hooks are a way to execute code before or after a specific event that occurs during the execution of a cucumber test.
+There are only 2 types of Cucumber hooks
+@Before --- setup
+@After  --- teardown
+
+Inheritance in Cucumber=======================================================================================
+

@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: SeleniumHomeWork.Assignment3Test
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.433 s <<< FAILURE! - in SeleniumHomeWork.Assignment3Test
+Launchtc(SeleniumHomeWork.Assignment3Test)  Time elapsed: 0.905 s  <<< FAILURE!
+org.testng.TestNGException: 
+
+Parameter 'browser' is required by @Test on method Launchtc but has not been marked @Optional or defined
+
+
